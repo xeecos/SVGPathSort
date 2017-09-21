@@ -1,0 +1,15 @@
+{
+    "name": "svgpathsort",
+    "version": "1.0.0",
+    "description": "SVG Paths Sort",
+    "main": "index.js",
+    "scripts": {
+        "build": "node-gyp configure & node-gyp build",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "install": "node-gyp rebuild"
+    },
+    "keywords": ["svg"],
+    "author": "xeecos",
+    "license": "GPL",
+    "gypfile": true
+}
