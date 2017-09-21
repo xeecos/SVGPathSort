@@ -34,7 +34,7 @@ void addPath(const v8::FunctionCallbackInfo<v8::Value> &args)
         path[i].y = points->Get(i + 2)->NumberValue();
     }
     paths.push_back(path);
-    args.GetReturnValue().Set(v8::Integer::New(isolate, path.size()));
+    args.GetReturnValue().Set(v8::Integer::New(isolate, paths.size()));
 }
 void sortPaths(const v8::FunctionCallbackInfo<v8::Value> &args)
 {
@@ -62,6 +62,7 @@ void init(v8::Local<v8::Object> exports)
 {
     NODE_SET_METHOD(exports, "sortPaths", sortPaths);
     NODE_SET_METHOD(exports, "addPath", addPath);
+    NODE_SET_METHOD(exports, "clear", clear);
 }
 
 NODE_MODULE(binding, init);
